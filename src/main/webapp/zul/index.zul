@@ -1,0 +1,20 @@
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="template.zul"?>
+
+
+<zk>
+    
+    <tabbox id="job" self="@define(content)" hflex="1">
+        <tabs>
+            <tab label="Utils" />
+            <tab label="Jobs" selected="true"/>
+        </tabs>
+        <tabpanels>
+            <tabpanel>
+                Luan
+            </tabpanel>
+            <tabpanel>
+                Mai
+            </tabpanel>
+        </tabpanels>
+    </tabbox>
+</zk>

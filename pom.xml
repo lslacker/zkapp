@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>info.thatngo</groupId>
 	<artifactId>zkapp</artifactId>
@@ -19,52 +20,77 @@
 		<java.version>1.8</java.version>
 		<zkspringboot.version>2.3.1</zkspringboot.version>
 		<zk.version>9.5.0</zk.version>
+		<zk-spring.version>4.0.1</zk-spring.version>
 	</properties>
 
 	<repositories>
-	    <repository>
-	        <id>ZK CE</id>
-	        <name>ZK CE Repository</name>
-	        <url>http://mavensync.zkoss.org/maven2</url>
-	    </repository>
+		<repository>
+			<id>ZK CE</id>
+			<name>ZK CE Repository</name>
+			<url>http://mavensync.zkoss.org/maven2</url>
+		</repository>
 	</repositories>
-	
+
 	<dependencies>
 		<dependency>
-	        <groupId>org.zkoss.zkspringboot</groupId>
-	        <artifactId>zkspringboot-starter</artifactId>
-	        <type>pom</type>
-	        <version>${zkspringboot.version}</version>
-	    </dependency>
-	    
-	    <dependency>
-	      <groupId>org.zkoss.zk</groupId>
-	      <artifactId>zul</artifactId>
-	      <version>${zk.version}</version>
-	    </dependency>
-	    
-	    <!-- If you want to use data binding, include this -->
-	    <dependency>
-	      <groupId>org.zkoss.zk</groupId>
-	      <artifactId>zkbind</artifactId>
-	      <version>${zk.version}</version>
-	    </dependency>
-	<!-- If you want to use zk xhtml component set, include this -->
-	    <dependency>
-	      <groupId>org.zkoss.zk</groupId>
-	      <artifactId>zhtml</artifactId>
-	      <version>${zk.version}</version>
-	    </dependency>
-	<!-- If you want to use third party framework e.g. hibernate, spring, you can include this -->
-	    <dependency>
-	      <groupId>org.zkoss.zk</groupId>
-	      <artifactId>zkplus</artifactId>
-	      <version>${zk.version}</version>
-	    </dependency>
-	    
+			<groupId>org.zkoss.zkspringboot</groupId>
+			<artifactId>zkspringboot-starter</artifactId>
+			<type>pom</type>
+			<version>${zkspringboot.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zul</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
+
+		<!-- If you want to use data binding, include this -->
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkbind</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
+		<!-- If you want to use zk xhtml component set, include this -->
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zhtml</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
+		<!-- If you want to use third party framework e.g. hibernate, spring, you 
+			can include this -->
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkplus</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkspring-core</artifactId>
+			<version>${zk-spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>servlet-api</artifactId>
+					<groupId>javax.servlet</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.zkoss.zk/zkspring-security -->
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkspring-security</artifactId>
+			<version>${zk-spring.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
 		<dependency>

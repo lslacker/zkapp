@@ -1,0 +1,26 @@
+<?taglib uri="/WEB-INF/tld/zkspring/security.tld" prefix="sec"?>
+
+<zk>
+    <borderlayout >
+        <west size="25%" border="0" >
+            <div >
+                <label sclass="lu-title" hflex="1">${labels.app.title}</label>
+                <hbox>
+                    <button label="Hi ${sec:getAuthentication('name')}"/>
+                    <button label="Logout" href="/logout"/>
+                    
+                </hbox>
+            </div>
+            
+        </west>
+        
+        <east border="0" width="50%" >
+            <div>
+                
+            <window zclass="z-window-overlapped" border="0" height="100%" 
+                viewModel="@id('vm') @init('info.thatngo.zkapp.mvvm.SidebarVM')">
+            </window>
+            </div>
+        </east>
+    </borderlayout>
+</zk>

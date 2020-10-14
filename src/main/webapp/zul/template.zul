@@ -1,0 +1,9 @@
+<!-- /WEB-INF/layout/template.zul -->
+<borderlayout>
+<north size="15%" autoscroll="true" flex="true" border="0">
+    <include src="sidebar.zul"/>
+</north>
+<south id="mainContent" autoscroll="true" self="@insert(content)" size="85%" border="none" flex="true">
+
+</south>
+</borderlayout>

@@ -1,10 +1,4 @@
-<?link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"?>
-<?link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"?>
-<zk xmlns:n="native">
-	<n:button onClick="alert('hello')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-  Button
-</n:button>
-	
+<zk>
     <window title="Hello ZK - Spring Boot!" border="normal">
         You are using ZK version <label value="${session.webApp.version}"/>
     </window>

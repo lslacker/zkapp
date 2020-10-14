@@ -5,6 +5,6 @@
 
 	<depends>zkmax</depends>
 
-	<stylesheet href="/css/static-globalstyles.css" type="text/css"/>
+	<stylesheet href="/static/css/static-globalstyles.css" type="text/css"/>
 	<stylesheet href="~./css/web-globalstyles.css" type="text/css"/>
 </language-addon>
